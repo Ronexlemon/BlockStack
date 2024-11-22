@@ -3,6 +3,7 @@ package block
 import (
 	"time"
 
+	
 	"github.com/RonexLemon/chain/types"
 )
 type BlockChain struct {
@@ -32,4 +33,20 @@ func (b *BlockChain) Blocks()*BlockChain{
 }
 func (b *BlockChain) BlocksHeight()uint64{
 	return uint64(len(b.Chain))
+}
+
+func (b *BlockChain) BlockItem(prevHash string, height uint64,data string,hash string) *types.Block {
+	
+	block := &types.Block{
+		Height:    height,
+		PrevHash:  prevHash,
+		Hash: hash,
+		Nonce:     0, 
+		Timestamp: int64(time.Now().Unix()), 
+		Transactions: data,
+	}
+
+	
+
+	return block
 }

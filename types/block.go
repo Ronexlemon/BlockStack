@@ -7,5 +7,11 @@ type Block struct{
 	//Transactions []Transaction
 	PrevHash string
 	Nonce uint64
+	Timestamp int64
+
+}
+
+type BlockChain struct{
+	Chain []Block
 
 }

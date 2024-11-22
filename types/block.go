@@ -4,7 +4,8 @@ package types
 type Block struct{
 	Height uint64
 	Hash string
-	//Transactions []Transaction
+	//Transactions []Transaction //will replace with data
+	Transactions string
 	PrevHash string
 	Nonce uint64
 	Timestamp int64

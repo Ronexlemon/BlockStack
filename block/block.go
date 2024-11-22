@@ -15,10 +15,11 @@ func(b *BlockChain) NewBlock(block *types.Block){
 func (b *BlockChain)NewGenisBlock()*types.Block{
 	return &types.Block{
 		Hash:     "0x00000000000000000000000000000",
-		Nonce: 100000,
+		Nonce: 0,
 		PrevHash: "",
 		Timestamp: int64(time.Now().Unix()),
 		Height: 0,
+		Transactions: "",
 	}
 }
 
@@ -28,4 +29,7 @@ func (b *BlockChain) GetRecentBlock() *types.Block{
 	}
 func (b *BlockChain) Blocks()*BlockChain{
 	return b
+}
+func (b *BlockChain) BlocksHeight()uint64{
+	return uint64(len(b.Chain))
 }

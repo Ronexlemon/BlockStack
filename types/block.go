@@ -16,3 +16,12 @@ type BlockChain struct{
 	Chain []Block
 
 }
+
+type Transaction struct{
+	from string
+	to string
+	amount float64
+	txHash string
+	
+
+}

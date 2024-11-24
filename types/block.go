@@ -22,6 +22,14 @@ type Transaction struct{
 	to string
 	amount float64
 	txHash string
+	gasValue int64
+	gasPrice float64
+	value string
+	
+
+
+
+
 	
 
 }

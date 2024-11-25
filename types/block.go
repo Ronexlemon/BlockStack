@@ -13,7 +13,7 @@ type Block struct{
 }
 
 type BlockChain struct{
-	Chain []Block
+	Chain []*Block
 
 }
 

@@ -11,7 +11,7 @@ type BlockChain struct {
 }
 
 func(b *BlockChain) NewBlock(block *types.Block){
-	b.Chain = append(b.Chain,*block)
+	b.Chain = append(b.Chain,block)
 }
 func (b *BlockChain)NewGenisBlock()*types.Block{
 	return &types.Block{
@@ -26,7 +26,7 @@ func (b *BlockChain)NewGenisBlock()*types.Block{
 
 //return recent block
 func (b *BlockChain) GetRecentBlock() *types.Block{
-	return &b.Chain[len(b.Chain)-1]
+	return b.Chain[len(b.Chain)-1]
 	}
 func (b *BlockChain) Blocks()*BlockChain{
 	return b

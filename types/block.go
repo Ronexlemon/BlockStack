@@ -17,6 +17,8 @@ type BlockChain struct{
 
 }
 
+
+
 type Transaction struct{
 	from string
 	to string

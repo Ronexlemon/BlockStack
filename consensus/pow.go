@@ -44,3 +44,25 @@ func  MineBlock( block *types.Block)[]byte{
 	
 
 }
+
+//proof of stake
+func  PoS(block *types.Block)[]byte{
+	var hashit [32]byte
+	for {
+		data := bytes.Join([][]byte{
+			[]byte(strconv.Itoa(int( block.Height))),
+			[]byte(block.PrevHash),
+			[]byte(block.PrevHash),
+			[]byte(strconv.Itoa(int(block.Timestamp))),
+			[]byte(strconv.Itoa(int(block.Nonce))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+			[]byte(strconv.Itoa(int(block.Stake))),
+		})}
+		return hashit[:]
+	
+	}
